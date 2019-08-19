@@ -1,2 +1,2 @@
-# discordbottutorial
-Discord bot tutorial
+# Discord Bot Tutorial
+Discord bot tutorial from youtube videos
