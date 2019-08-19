@@ -1,0 +1,26 @@
+{
+  "name": "xeno-bot",
+  "version": "0.0.1",
+  "description": "A simple discord bot.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "discord.js": "*"
+  },
+  "engines": {
+    "node": "10.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/mybotapp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express",
+    "xeno"
+  ]
+}
