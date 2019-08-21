@@ -1,6 +1,7 @@
 // lets define discord
 const Discord = require("discord.js"); // discord.js
 const client = new Discord.Client(); // client
+const api = require("some-random-api");
 
 // on ready
 client.on("ready", () => {
@@ -24,6 +25,23 @@ client.on("message", async (message) => {
   
   if (!message.guild || message.author.bot) return;
   let prefix = ":?"
+  
+  if (message.channel.id === "yourchannelid") {
+    
+    
+    let input = message.content;
+    
+    message.channel.startTyping();
+    
+    let output = await api.chat(input)
+    
+    message.channel.stopTyping();
+    
+    return message.reply(output)
+    
+    
+    
+  }
   
   if (!message.content.startsWith(prefix)) return;
   
