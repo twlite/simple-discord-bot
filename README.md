@@ -4,6 +4,7 @@ Discord bot tutorial from youtube videos
 ## Features
 - Chatbot
 - Hi-Hello
+- Spotify
 
 
 # How To MAke A Discord Bot?
