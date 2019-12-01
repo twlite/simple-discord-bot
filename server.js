@@ -1,7 +1,7 @@
 // lets define discord
 const Discord = require("discord.js"); // discord.js
 const client = new Discord.Client(); // client
-const api = require("some-random-api");
+const weirdapi = require("weirdapi.js");
 
 // on ready
 client.on("ready", () => {
@@ -33,7 +33,7 @@ client.on("message", async (message) => {
     
     message.channel.startTyping();
     
-    let output = await api.chat(input)
+    let output = await weirdapi.chat(input)
     
     message.channel.stopTyping();
     
