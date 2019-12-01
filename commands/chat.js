@@ -1,4 +1,4 @@
-const api = require("some-random-api")
+const weirdapi = require("weirdapi.js")
 
 module.exports.run = async (client, message, args) => {
   
@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args) => {
   if (!input) return message.channel.send(":x: Please provide a text.");
   
   message.channel.startTyping()
-  let output = await api.chat(`${input}`)
+  let output = await weirdapi.chat(`${input}`)
   message.channel.send(output)
   message.channel.stopTyping()
   
