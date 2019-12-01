@@ -61,6 +61,36 @@ client.on("message", async (message) => {
   }
   
   
-})
+});
+// serverstats
+// on member add
+client.on("guildMemberAdd", (member) => {
+
+  var ops = {
+    total: "total-membercount-channel-id",
+    humans: "humans-count-channel-id",
+    bots: "bots-count-channel-id"
+  }
+  
+  member.guild.channels.get(ops.total).setName(`Total Members: ${member.guild.memberCount}`); // total membercount
+  member.guild.channels.get(ops.humans).setName(`Humans: ${member.guild.members.filter(m => !m.user.bot).size}`); // humans
+  member.guild.channels.get(ops.bots).setName(`Bots: ${member.guild.members.filter(m => m.user.bot).size}`); // bots
+
+});
+
+// on member remove
+client.on("guildMemberRemove", (member) => {
+
+  var ops = {
+    total: "total-membercount-channel-id",
+    humans: "humans-count-channel-id",
+    bots: "bots-count-channel-id"
+  }
+  
+  member.guild.channels.get(ops.total).setName(`Total Members: ${member.guild.memberCount}`); // total membercount
+  member.guild.channels.get(ops.humans).setName(`Humans: ${member.guild.members.filter(m => !m.user.bot).size}`); // humans
+  member.guild.channels.get(ops.bots).setName(`Bots: ${member.guild.members.filter(m => m.user.bot).size}`); // bots
+
+});
 
 client.login(`${process.env.BOT_TOKEN}`); // login your bot to discord
